@@ -35,7 +35,7 @@ package
 	public class Multiplayer 
 	{
 		private const SERVER		:String   = "rtmfp://p2p.rtmfp.net/";
-		private const DEVKEY		:String   = "70e960c3a7f123ff9a8c68aa-1cada0cb235e"; // TODO: add your Cirrus key here. You can get a key from here : http://labs.adobe.com/technologies/cirrus/
+		private const DEVKEY		:String   = ""; // TODO: add your Cirrus key here. You can get a key from here : http://labs.adobe.com/technologies/cirrus/
 		private const SERV_KEY		:String = SERVER + DEVKEY;
 		
 		private const OP_ROTATION 	:String = "R";
@@ -82,7 +82,7 @@ package
 			
 			mConnection.connect(mMyName, { color: mMyColor, x: aStartX, y: aStartY, name: mMyName } );
 			
-			(FlxG.state as PlayState).hud.showMessage("Connecting", DEVKEY.length == 0 ? "ATTENTION! Use a valid key in DEVKEY at Multiplayer.as (line 12)" : "Please wait while we join the fun!", Number.MAX_VALUE);
+			(FlxG.state as PlayState).hud.showMessage("Connecting", DEVKEY.length == 0 ? "ATTENTION! Use a valid key in DEVKEY at Multiplayer.as (line 38)" : "Please wait while we join the fun!", Number.MAX_VALUE);
 		}
 		
 		protected function handleConnect(theUser:UserObject) :void {
